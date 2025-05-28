@@ -143,6 +143,30 @@
       top: 50%;
       transform: translateY(-50%);
     }
+
+    body {
+  margin: 0;
+  padding: 0;
+  background-image: url('https://64.media.tumblr.com/ed86423fe34b049abf8305431d08f4de/6e84a00abfa1828f-dc/s1280x1920/b2e159f1bb05922886f9b8c5c85bbcfb03930f19.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.2); /* Blanco translúcido */
+  z-index: -1;
+}
+    
   </style>
 </head>
 <body>
