@@ -30,12 +30,12 @@
     }
     .photo-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(3, 1fr); /* Fuerza 3 columnas */
+      gap: 12px; /* Menor espacio entre fotos */
       justify-items: center;
-      padding: 10px;
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 0 auto;
+      padding: 0 20px;
     }
     .polaroid {
       width: 200px;
