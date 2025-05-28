@@ -29,33 +29,31 @@
       line-height: 1.6;
     }
     .photo-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Fuerza 3 columnas */
-      gap: 12px; /* Menor espacio entre fotos */
-      justify-items: center;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+  }
     .polaroid {
-      width: 200px;
-      background: #fff;
-      padding: 10px;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-      position: relative;
-      transform: rotate(var(--rotation));
-      transition: transform 0.2s;
-      text-align: center;
-      cursor: pointer;
-    }
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
     .polaroid:hover {
-      transform: scale(1.05) rotate(var(--rotation));
-    }
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
     .polaroid img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+  }
     .caption {
       font-size: 1.3rem;
       margin-top: 10px;
@@ -148,16 +146,13 @@
     }
 
     body {
-  margin: 0;
-  padding: 0;
-  background-image: url('https://64.media.tumblr.com/ed86423fe34b049abf8305431d08f4de/6e84a00abfa1828f-dc/s1280x1920/b2e159f1bb05922886f9b8c5c85bbcfb03930f19.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-}
+    margin: 0;
+    padding: 0;
+    background: url('https://64.media.tumblr.com/ed86423fe34b049abf8305431d08f4de/6e84a00abfa1828f-dc/s1280x1920/b2e159f1bb05922886f9b8c5c85bbcfb03930f19.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
 
 body::before {
   content: "";
@@ -169,6 +164,14 @@ body::before {
   background-color: rgba(255, 255, 255, 0.2); /* Blanco translúcido */
   z-index: -1;
 }
+
+  .title {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+  }
     
   </style>
 </head>
