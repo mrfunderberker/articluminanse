@@ -12,28 +12,45 @@
       padding: 40px;
       text-align: center;
     }
-    .series-title {
+    ..series-title {
+  position: relative;
+  display: inline-block;
   font-size: 3rem;
   margin-bottom: 10px;
   font-weight: bold;
-  font-family: 'Caveat', cursive;
-  position: relative;
-  display: inline-block;
-  color: white;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   animation: floatLetters 4s ease-in-out infinite;
-  transition: transform 0.3s ease, text-shadow 0.3s ease;
-  cursor: default;
+  z-index: 1;
 }
     @keyframes floatLetters {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-6px); }
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
   100% { transform: translateY(0); }
+}
+
+    .series-title::before,
+.series-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 220%;
+  height: 150%;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.4), transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.4;
+  transition: opacity 0.5s, transform 0.8s;
+  z-index: -1;
+}
+    .series-title:hover::before,
+.series-title:hover::after {
+  opacity: 0;
+  transform: scale(1.8) translate(-50%, -50%);
 }
     .series-title:hover {
   animation-play-state: paused;
-  text-shadow: 0 0 14px rgba(255, 255, 255, 0.8);
 }
+    
     .series-description {
       font-size: 1.1rem;
       max-width: 700px;
