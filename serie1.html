@@ -203,6 +203,22 @@ body::before {
   background-color: rgba(255, 255, 255, 0.5); /* Blanco translúcido */
   z-index: -1;
 } 
+
+    .floating-cloud {
+  position: fixed;
+  top: 100px;
+  left: -300px;
+  width: 400px;
+  height: auto;
+  opacity: 0.5;
+  z-index: 0;
+  animation: cloudDrift 60s linear infinite;
+}
+
+@keyframes cloudDrift {
+  0% { left: -400px; }
+  100% { left: 110%; }
+}
     
   </style>
 </head>
@@ -213,6 +229,7 @@ body::before {
     fotografia que me cambio la vida. 
     
   </div>
+  <img src="https://64.media.tumblr.com/34f43e171414a0b2ebf638c89b95dfab/19e087908996603d-50/s1280x1920/68817ca5690d4130aabc170a5de2cd4be3d852cb.pnj" alt="nube" class="floating-cloud">
   <div class="photo-grid">
     <div class="polaroid" style="--rotation: -1.8deg;"><img src="foto1.jpg" alt="Foto 1"><div class="caption">Despertar</div></div>
     <div class="polaroid" style="--rotation: 1.2deg;"><img src="foto2.jpg" alt="Foto 2"><div class="caption">Recreo</div></div>
