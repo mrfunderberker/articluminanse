@@ -205,26 +205,29 @@ body::before {
 } 
 
   .floating-cloud {
-  position: absolute;
-  top: -40px; /* súbela según lo que necesites */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 800px; /* tamaño grande */
-  opacity: 0.6;
-  z-index: 0; /* detrás del título */
-  animation: moveCloud 60s ease-in-out infinite;
+  position: fixed;
+  top: 40px; /* puedes ajustar más fino aquí */
+  left: -500px;
+  width: 800px;
+  opacity: 0.5;
+  z-index: 0;
+  animation: cloudDrift 60s linear infinite;
   pointer-events: none;
 }
 
 @keyframes cloudDrift {
-  0% { left: -400px; }
-  100% { left: 110%; }
+  0% {
+    left: -500px;
+  }
+  100% {
+    left: 110%;
+  }
 }
-    
+   
   </style>
 </head>
 <body>
-  <img src="https://github.com/mrfunderberker/articluminanse/blob/main/titulo_serie1.png?raw=true" alt="nube" class="floating-cloud">
+  <img src="https://raw.githubusercontent.com/mrfunderberker/articluminanse/main/titulo_serie1.png" class="floating-cloud" alt="nube">
   <h1 class="series-title">Resiliencia</h1>
   <div class="series-description">
     Es esa eterna lucha en cambiar sin dejar de ser uno mismo contra algo que nunca permanece igual... el tiempo. Mi primera práctica de
