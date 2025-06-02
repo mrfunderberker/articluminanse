@@ -205,15 +205,15 @@ body::before {
 } 
 
     .floating-cloud {
-  position: fixed;
-  top: 100px;
-  left: -300px;
+  position: absolute;
+  top: -20px; /* o prueba con -40px, -60px, etc. */
+  left: 50%;
+  transform: translateX(-50%);
   width: 800px;
-  height: auto;
-  opacity: 0.5;
-  z-index: 0;
-  animation: cloudDrift 60s linear infinite;
-}
+  opacity: 0.6;
+  animation: moveCloud 60s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 2;
 
 @keyframes cloudDrift {
   0% { left: -400px; }
