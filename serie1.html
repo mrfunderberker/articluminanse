@@ -100,12 +100,15 @@
     box-shadow: 0 8px 24px rgba(0,0,0,0.3);
   }
     .polaroid img {
-  width: 180px; /* Ajusta a 160px o 150px si quieres más pequeño */
-  height: auto;
+  width: 180px; /* o el tamaño deseado */
+  height: 240px; /* define altura fija */
+  object-fit: cover; /* recorta en vez de deformar */
+  object-position: center; /* centra el recorte */
   display: block;
   margin: 0 auto;
   transition: transform 0.3s ease;
 }
+
     .caption {
       font-size: 1.3rem;
       margin-top: 10px;
