@@ -206,15 +206,16 @@ body::before {
 
   .floating-cloud {
   position: absolute;
-  top: 20px; /* súbela visualmente, puedes ajustar este valor */
+  top: -40px; /* súbela según lo que necesites */
   left: 50%;
   transform: translateX(-50%);
-  width: 800px; /* ancho grande pero controlado */
+  width: 800px; /* tamaño grande */
   opacity: 0.6;
+  z-index: 0; /* detrás del título */
   animation: moveCloud 60s ease-in-out infinite;
   pointer-events: none;
-  z-index: 1;
 }
+
 
 @keyframes cloudDrift {
   0% { left: -400px; }
