@@ -235,13 +235,21 @@ body::before {
   }
 }
 
-    .sunburst {
+   .sunburst {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 160px;
   height: 160px;
-  background: radial-gradient(circle, rgba(255, 230, 150, 0.6) 0%, transparent 70%);
+  background: conic-gradient(
+    from 0deg,
+    rgba(255, 230, 150, 0.4) 0deg 10deg,
+    transparent 10deg 20deg,
+    rgba(255, 230, 150, 0.4) 20deg 30deg,
+    transparent 30deg 40deg,
+    rgba(255, 230, 150, 0.4) 40deg 50deg,
+    transparent 50deg 60deg
+  );
   border-radius: 50%;
   opacity: 0;
   transform: translate(-50%, -60%) scale(0.8);
@@ -259,7 +267,17 @@ body::before {
 .polaroid:focus-within .sunburst,
 .polaroid:active .sunburst {
   opacity: 1;
-  transform: translate(-50%, -60%) scale(1.2);
+  transform: translate(-50%, -60%) scale(1.1) rotate(10deg);
+  animation: rotateRays 2s linear infinite;
+}
+
+@keyframes rotateRays {
+  0% {
+    transform: translate(-50%, -60%) scale(1.1) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -60%) scale(1.1) rotate(360deg);
+  }
 }
 
     
