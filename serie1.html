@@ -239,12 +239,12 @@ body::before {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   background: radial-gradient(circle, rgba(255, 230, 150, 0.6) 0%, transparent 70%);
   border-radius: 50%;
   opacity: 0;
-  transform: translate(-50%, -50%) scale(0.8);
+  transform: translate(-50%, -60%) scale(0.8);
   z-index: 0;
   pointer-events: none;
   transition: opacity 0.4s ease, transform 0.4s ease;
@@ -252,15 +252,16 @@ body::before {
 
 .polaroid {
   position: relative;
-  z-index: 1; /* Asegura que esté encima del sunburst */
+  z-index: 1;
 }
 
 .polaroid:hover .sunburst,
 .polaroid:focus-within .sunburst,
 .polaroid:active .sunburst {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1.2);
-} 
+  transform: translate(-50%, -60%) scale(1.2);
+}
+
     
   </style>
 </head>
