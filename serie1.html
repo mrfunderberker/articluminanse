@@ -105,9 +105,15 @@
   object-fit: cover; /* recorta en vez de deformar */
   object-position: center; /* centra el recorte */
   display: block;
-  transition: transform 0.3s ease;
+  margin: 0 auto;
+  filter: sepia(0.2) brightness(1.05) contrast(1.15) saturate(0.9);
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
+.polaroid img:hover,
+  .polaroid img:focus {
+  filter: sepia(0.1) brightness(1.1) contrast(1.2) saturate(1);
+}
     .caption {
       font-size: 1.3rem;
       margin-top: 10px;
