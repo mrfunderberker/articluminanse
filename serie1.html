@@ -245,9 +245,43 @@ body::before {
     left: 110%;
   }
 }
-    
+
+    @media (max-width: 768px) {
+  .photo-grid {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .polaroid {
+    width: 90%;
+    max-width: 320px;
+    padding: 8px;
+    margin: 0 auto;
+  }
+
+  .polaroid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .series-description {
+    font-size: 1rem;
+    padding: 0 16px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+    padding: 0 10px;
+    text-align: center;
+  }
+}
+  
   </style>
 </head>
+
+  
 <body>
   <img src="https://raw.githubusercontent.com/mrfunderberker/articluminanse/main/titulo_serie1.png" class="floating-cloud" alt="nube">
   <h1 class="series-title">Resiliencia</h1>
